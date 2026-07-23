@@ -109,8 +109,8 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 .form-submit{width:100%;background:var(--ink);color:#fff;border:none;border-radius:14px;padding:17px;font-size:15px;font-weight:700;cursor:pointer}
 .form-submit:disabled{opacity:.5;cursor:not-allowed}
 .form-status{font-size:13px;text-align:center;margin-top:12px;display:none}
-.form-status.ok{color:var(--brand-dark);display:block}
-.form-status.err{color:#c62828;display:block}
+.form-status.ok{display:block;background:var(--brand-light);border:1px solid rgba(151,215,0,.5);border-radius:12px;padding:16px;color:#000;font-weight:700;font-size:14px;line-height:1.6}
+.form-status.err{color:#c62828;display:block;font-weight:700}
 
 .footer-brand{text-align:center;font-size:26px;font-weight:900;letter-spacing:.1em;color:var(--brand-dark);opacity:.4;margin-top:48px}
 @media(max-width:480px){.overview,.dd{grid-template-columns:1fr}}
@@ -390,7 +390,7 @@ document.getElementById('applyForm').addEventListener('submit', function(e){
     headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify(payload)
   }).then(function(){
-    statusEl.textContent = '신청이 접수되었습니다. 브랜드 컨펌 과정을 거쳐, 선정되신 분께만 개별 연락 드릴 예정입니다. 감사합니다!';
+    statusEl.textContent = '✅ 신청이 접수되었습니다. 브랜드 컨펌 과정을 거쳐, 선정되신 분께만 개별 연락 드릴 예정입니다. 감사합니다!';
     statusEl.className = 'form-status ok';
     submitBtn.textContent = '접수 완료 ✓';
   }).catch(function(){
