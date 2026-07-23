@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>후아고 크리에이터 가이드 - B</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root{
   --brand:       #8DC63F;
@@ -13,11 +12,11 @@
   --brand-light: #EAF7D9;
   --bg:          #FBF8F0;
   --ink:#211A33; --gray:#7A6A6A; --white:#fff;
-  --mono:'JetBrains Mono',monospace;
+  --mono:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-tap-highlight-color:transparent;word-break:keep-all;overflow-wrap:break-word;word-wrap:break-word}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-tap-highlight-color:transparent;word-break:keep-all;overflow-wrap:break-word;word-wrap:break-word}
 .wrap{max-width:680px;margin:0 auto;padding-bottom:72px;overflow-x:hidden}
 .nowrap{white-space:nowrap}
 
@@ -28,6 +27,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink)
 .hero h1{font-size:clamp(38px,11vw,56px);font-weight:900;letter-spacing:.04em;position:relative}
 .hero-sub{font-size:14px;opacity:.9;margin-top:8px;letter-spacing:.03em;position:relative;font-style:italic}
 .hero-desc{font-size:14px;opacity:.92;margin:18px auto 0;max-width:460px;position:relative}
+.hero-desc .accent{color:var(--brand);opacity:1;font-weight:700}
 .hero-maker{font-size:12px;opacity:.7;margin-top:14px;position:relative}
 
 /* SECTION */
@@ -35,6 +35,9 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink)
 .section-title{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
 .section-title .num{font-family:var(--mono);font-size:12px;color:var(--brand-dark);background:var(--brand-light);border-radius:8px;padding:4px 9px;font-weight:500}
 .badge-req{display:inline-block;background:var(--brand-dark);color:#fff;font-size:10px;font-weight:700;letter-spacing:.08em;border-radius:6px;padding:2px 8px;vertical-align:middle;margin-left:6px}
+
+/* PRODUCT PHOTO */
+.product-photo{width:100%;border-radius:16px;border:1px solid rgba(33,26,51,.1);margin-bottom:14px;display:block}
 
 /* OVERVIEW GRID */
 .overview{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -125,9 +128,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink)
     <div class="hero-badge">Influencer Guide</div>
     <h1>HOOAGO</h1>
     <div class="hero-sub">"Eat spicy, Stay happy"</div>
-    <p class="hero-desc">후아고는 매운 음식을 피하게 만드는 게 아니라, 매운맛을 즐긴 뒤의 불편함을 가볍게 케어해 매운맛 문화를 더 즐겁게 누리도록 돕는 <strong>매운맛 엔딩 케어 브랜드</strong>입니다. 장내 마이크로바이옴 빅데이터 기반 바이오 헬스케어 기업 <strong class="nowrap">바이옴에이츠(BIOMATZ)</strong>가 만들었습니다.</p>
-    <p class="hero-maker">본 가이드는 후아고 인플루언서 캠페인 참여 크리에이터를 위해 제작되었습니다.</p>
-  </div>
+    <p class="hero-desc">후아고는 매운 음식을 피하게 만드는 게 아니라,<br>매운맛을 즐긴 뒤의 불편함을 가볍게 케어해<br>매운맛 문화를 더 즐겁게 누리도록 돕는 매운맛 엔딩 케어 브랜드입니다.<br><br>장내 마이크로바이옴 빅데이터 기반 바이오 헬스케어 기업<br><span class="accent nowrap">바이옴에이츠(BIOMATZ)</span>가 만들었습니다.</p>  </div>
 
   <!-- ░░ 1. 캠페인 개요 ░░ -->
   <div class="section">
@@ -144,6 +145,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink)
   <!-- ░░ 2. 제품 소개 ░░ -->
   <div class="section">
     <div class="section-title"><span class="num">02</span> 제품 소개</div>
+    <img class="product-photo" src="assets/product.png" alt="후아고 유산균 겔스틱 (청사과맛) 제품 사진">
     <div class="ov-card" style="margin-bottom:14px">
       <div class="ov-label">제품명</div>
       <div class="ov-value">후아고 유산균 겔스틱 (청사과맛)</div>
