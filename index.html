@@ -7,11 +7,11 @@
 <style>
 
 :root{
-  --brand:       #8DC63F;
-  --brand-dark:  #2F7D32;
-  --brand-light: #EAF7D9;
-  --bg:          #FBF8F0;
-  --ink:#211A33; --gray:#7A6A6A; --white:#fff;
+  --brand:       #97D700;
+  --brand-dark:  #000000;
+  --brand-light: #F1FADB;
+  --bg:          #FFFEFB;
+  --ink:#000000; --gray:#8C8C8C; --white:#fff;
   --mono:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -19,19 +19,18 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-tap-highlight-color:transparent;word-break:keep-all;overflow-wrap:break-word;min-height:100vh}
 .wrap{max-width:520px;margin:0 auto;padding:0 24px 72px}
 
-/* HERO */
-.hero{background:linear-gradient(135deg,var(--ink) 0%,var(--brand-dark) 60%,var(--brand) 100%);color:#fff;padding:56px 24px 44px;text-align:center;position:relative;overflow:hidden;margin:0 -24px}
-.hero::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.10);top:-80px;right:-70px}
-.hero-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:100px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 16px;margin-bottom:18px;position:relative}
-.hero h1{font-size:clamp(32px,10vw,44px);font-weight:900;letter-spacing:.04em;position:relative}
-.hero-sub{font-size:13px;opacity:.85;margin-top:8px;position:relative}
+/* HERO / BANNER */
+.banner{background:var(--brand);padding:48px 24px 40px;text-align:center;margin:0 -24px}
+.banner-badge{display:inline-block;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.3);color:#000;border-radius:100px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 16px;margin-bottom:16px}
+.banner-title{font-size:clamp(32px,10vw,44px);font-weight:900;letter-spacing:.02em;color:#000;line-height:1}
+.hero-sub{font-size:13px;color:var(--ink);opacity:.65;margin-top:12px;text-align:center}
 
 /* GATE */
 #gate{padding:56px 0 0}
-.gate-box{background:var(--white);border:1px solid rgba(33,26,51,.1);border-radius:16px;padding:28px 24px;text-align:center}
+.gate-box{background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:16px;padding:28px 24px;text-align:center}
 .gate-label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
 .gate-title{font-size:17px;font-weight:900;margin-bottom:18px}
-.gate-input{width:100%;text-align:center;letter-spacing:.5em;font-size:20px;font-family:var(--mono);background:var(--bg);border:1px solid rgba(33,26,51,.15);border-radius:12px;padding:14px 16px;color:var(--ink)}
+.gate-input{width:100%;text-align:center;letter-spacing:.5em;font-size:20px;font-family:var(--mono);background:var(--bg);border:1px solid rgba(0,0,0,.15);border-radius:12px;padding:14px 16px;color:var(--ink)}
 .gate-input:focus{outline:none;border-color:var(--brand-dark)}
 .gate-btn{width:100%;margin-top:14px;background:var(--ink);color:#fff;border:none;border-radius:12px;padding:15px;font-size:14px;font-weight:700;cursor:pointer}
 .gate-error{font-size:12px;color:#c62828;margin-top:12px;display:none}
@@ -41,11 +40,12 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 #assets{display:none;padding-top:40px}
 .assets-title{font-size:15px;font-weight:700;color:var(--gray);margin-bottom:16px}
 .asset-grid{display:flex;flex-direction:column;gap:12px}
-.asset-card{display:flex;align-items:center;gap:16px;background:var(--white);border:1px solid rgba(33,26,51,.1);border-radius:16px;padding:18px 20px;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.asset-card{display:flex;align-items:center;gap:16px;background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:16px;padding:18px 20px;text-decoration:none;color:var(--ink);transition:border-color .15s}
 .asset-card:hover{border-color:var(--brand-dark)}
 .asset-letter{flex:none;width:44px;height:44px;border-radius:12px;background:var(--brand-light);color:var(--brand-dark);font-weight:900;font-size:18px;display:flex;align-items:center;justify-content:center;font-family:var(--mono)}
 .asset-info{flex:1}
 .asset-name{font-size:15px;font-weight:700}
+.asset-fee{font-size:11px;font-weight:700;color:var(--brand-dark);background:var(--brand-light);border-radius:100px;padding:2px 8px;margin-left:6px;vertical-align:middle}
 .asset-desc{font-size:12px;color:var(--gray);margin-top:2px}
 .asset-arrow{flex:none;font-size:16px;color:var(--gray)}
 
@@ -55,11 +55,11 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 <body>
 <div class="wrap">
 
-  <div class="hero">
-    <div class="hero-badge">Asset Hub</div>
-    <h1>HOOAGO</h1>
-    <div class="hero-sub">인플루언서 가이드 에셋 관리</div>
+  <div class="banner">
+    <div class="banner-badge">Asset Hub</div>
+    <h1 class="banner-title">HOOAGO</h1>
   </div>
+  <div class="hero-sub">인플루언서 가이드 에셋 관리</div>
 
   <!-- ░░ 비밀번호 게이트 ░░ -->
   <div id="gate">
@@ -78,22 +78,22 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
     <div class="asset-grid">
       <a class="asset-card" href="a.html">
         <div class="asset-letter">A</div>
-        <div class="asset-info"><div class="asset-name">A</div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
+        <div class="asset-info"><div class="asset-name">A <span class="asset-fee">고료 5만원</span></div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
         <div class="asset-arrow">→</div>
       </a>
       <a class="asset-card" href="b.html">
         <div class="asset-letter">B</div>
-        <div class="asset-info"><div class="asset-name">B</div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
+        <div class="asset-info"><div class="asset-name">B <span class="asset-fee">고료 10만원</span></div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
         <div class="asset-arrow">→</div>
       </a>
       <a class="asset-card" href="c.html">
         <div class="asset-letter">C</div>
-        <div class="asset-info"><div class="asset-name">C</div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
+        <div class="asset-info"><div class="asset-name">C <span class="asset-fee">고료 20만원</span></div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
         <div class="asset-arrow">→</div>
       </a>
       <a class="asset-card" href="d.html">
         <div class="asset-letter">D</div>
-        <div class="asset-info"><div class="asset-name">D</div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
+        <div class="asset-info"><div class="asset-name">D <span class="asset-fee">고료 30만원</span></div><div class="asset-desc">후아고 크리에이터 가이드</div></div>
         <div class="asset-arrow">→</div>
       </a>
     </div>

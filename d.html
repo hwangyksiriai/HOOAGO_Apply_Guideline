@@ -7,11 +7,11 @@
 <style>
 
 :root{
-  --brand:       #8DC63F;
-  --brand-dark:  #2F7D32;
-  --brand-light: #EAF7D9;
-  --bg:          #FBF8F0;
-  --ink:#211A33; --gray:#7A6A6A; --white:#fff;
+  --brand:       #97D700;
+  --brand-dark:  #000000;
+  --brand-light: #F1FADB;
+  --bg:          #FFFEFB;
+  --ink:#000000; --gray:#8C8C8C; --white:#fff;
   --mono:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -20,41 +20,40 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 .wrap{max-width:680px;margin:0 auto;padding-bottom:72px;overflow-x:hidden}
 .nowrap{white-space:nowrap}
 
-/* HERO */
-.hero{background:linear-gradient(135deg,var(--ink) 0%,var(--brand-dark) 60%,var(--brand) 100%);color:#fff;padding:64px 24px 56px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.10);top:-90px;right:-80px}
-.hero-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:100px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 16px;margin-bottom:20px;position:relative}
-.hero h1{font-size:clamp(38px,11vw,56px);font-weight:900;letter-spacing:.04em;position:relative}
-.hero-sub{font-size:14px;opacity:.9;margin-top:8px;letter-spacing:.03em;position:relative;font-style:italic}
-.hero-desc{font-size:14px;opacity:.92;margin:18px auto 0;max-width:460px;position:relative}
-.hero-desc .accent{color:var(--brand);opacity:1;font-weight:700}
-.hero-maker{font-size:12px;opacity:.7;margin-top:14px;position:relative}
+/* HERO / BANNER */
+.banner{background:var(--brand);padding:56px 24px 48px;text-align:center}
+.banner-badge{display:inline-block;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.3);color:#000;border-radius:100px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 16px;margin-bottom:18px}
+.banner-title{font-size:clamp(38px,11vw,56px);font-weight:900;letter-spacing:.02em;color:#000;line-height:1}
+.hero-text{background:var(--bg);padding:28px 24px 8px;text-align:center}
+.hero-sub{font-size:14px;color:var(--ink);opacity:.65;margin-top:0;letter-spacing:.03em;font-style:italic}
+.hero-desc{font-size:14px;color:var(--ink);opacity:.85;margin:16px auto 0;max-width:460px}
+.accent{background:var(--brand);color:#000;padding:1px 5px;border-radius:4px;font-weight:700}
 
 /* SECTION */
-.section{padding:40px 24px;border-bottom:1px solid rgba(33,26,51,.08)}
+.section{padding:40px 24px;border-bottom:1px solid rgba(0,0,0,.08)}
 .section-title{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
 .section-title .num{font-family:var(--mono);font-size:12px;color:var(--brand-dark);background:var(--brand-light);border-radius:8px;padding:4px 9px;font-weight:500}
 .badge-req{display:inline-block;background:var(--brand-dark);color:#fff;font-size:10px;font-weight:700;letter-spacing:.08em;border-radius:6px;padding:2px 8px;vertical-align:middle;margin-left:6px}
 
 /* PRODUCT PHOTO */
-.product-photo{width:100%;border-radius:16px;border:1px solid rgba(33,26,51,.1);margin-bottom:14px;display:block}
+.product-photo{width:100%;border-radius:16px;border:1px solid rgba(0,0,0,.1);margin-bottom:14px;display:block}
 
 /* OVERVIEW GRID */
 .overview{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.ov-card{background:var(--white);border:1px solid rgba(33,26,51,.1);border-radius:14px;padding:16px}
+.ov-card{background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:14px;padding:16px}
 .ov-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:6px}
 .ov-value{font-size:15px;font-weight:700}
 
 /* STEPS */
 .steps{display:flex;flex-direction:column;gap:10px}
-.step{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid rgba(33,26,51,.1);border-radius:14px;padding:14px 16px}
+.step{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:14px;padding:14px 16px}
 .step-num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--brand-dark);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
 .step-text{font-size:14px;padding-top:2px}
 .step-text strong{color:var(--brand-dark)}
 
 /* CONCEPT CARDS */
 .concepts{display:flex;flex-direction:column;gap:12px}
-.concept{background:var(--white);border:1px solid rgba(33,26,51,.1);border-radius:14px;padding:16px}
+.concept{background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:14px;padding:16px}
 .concept-title{font-size:14px;font-weight:900;color:var(--brand-dark);margin-bottom:6px}
 .concept-text{font-size:13px;color:var(--gray)}
 .ref-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
@@ -68,26 +67,27 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 
 /* HASHTAG CHIPS */
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.tag{background:var(--brand-light);color:var(--brand-dark);font-size:13px;font-weight:500;border-radius:100px;padding:6px 14px}
+.tag{background:var(--brand-light);color:var(--brand-dark);font-size:13px;font-weight:500;border-radius:100px;padding:6px 14px;border:none;cursor:pointer;font-family:inherit}
+.tag.copied{background:var(--brand);color:#000}
 
 /* DO & DON'T */
 .dd{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .dd-col{border-radius:14px;padding:16px}
-.dd-do{background:rgba(46,125,50,.08);border:1px solid rgba(46,125,50,.25)}
+.dd-do{background:rgba(151,215,0,.12);border:1px solid rgba(151,215,0,.4)}
 .dd-dont{background:rgba(198,40,40,.06);border:1px solid rgba(198,40,40,.22)}
 .dd-head{font-weight:900;font-size:14px;margin-bottom:10px}
-.dd-do .dd-head{color:#2e7d32}.dd-dont .dd-head{color:#c62828}
+.dd-do .dd-head{color:#000}.dd-dont .dd-head{color:#c62828}
 .dd-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .dd-col li{font-size:13px;padding-left:18px;position:relative}
-.dd-do li::before{content:'✓';position:absolute;left:0;color:#2e7d32;font-weight:700}
+.dd-do li::before{content:'✓';position:absolute;left:0;color:#000;font-weight:700}
 .dd-dont li::before{content:'✕';position:absolute;left:0;color:#c62828;font-weight:700}
 
 /* SETTLEMENT */
-.settle-desc{background:var(--white);border:1px solid rgba(33,26,51,.1);border-radius:14px;padding:16px;font-size:14px;color:var(--ink);margin-bottom:14px}
+.settle-desc{background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:14px;padding:16px;font-size:14px;color:var(--ink);margin-bottom:14px}
 .settle-desc strong{color:var(--brand-dark)}
-.settle-list{background:var(--white);border:1px solid rgba(33,26,51,.1);border-radius:14px;overflow:hidden}
+.settle-list{background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:14px;overflow:hidden}
 .settle-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:16px}
-.settle-row+.settle-row{border-top:1px solid rgba(33,26,51,.08)}
+.settle-row+.settle-row{border-top:1px solid rgba(0,0,0,.08)}
 .settle-label{font-size:13px;color:var(--gray);flex:none;padding-top:1px}
 .settle-value{font-size:13px;font-weight:700;text-align:right}
 
@@ -95,7 +95,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 .form-field{margin-bottom:16px}
 .form-label{display:block;font-size:13px;font-weight:700;margin-bottom:8px}
 .form-label .req{color:var(--brand-dark)}
-.form-input,.form-textarea{width:100%;background:var(--white);border:1px solid rgba(33,26,51,.15);border-radius:12px;padding:14px 16px;font-family:inherit;font-size:15px;color:var(--ink)}
+.form-input,.form-textarea{width:100%;background:var(--white);border:1px solid rgba(0,0,0,.15);border-radius:12px;padding:14px 16px;font-family:inherit;font-size:15px;color:var(--ink)}
 .form-input::placeholder,.form-textarea::placeholder{color:#B6ACAC}
 .form-input:focus,.form-textarea:focus{outline:none;border-color:var(--brand-dark)}
 .form-textarea{resize:vertical;min-height:96px}
@@ -103,7 +103,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 .zip-row .form-input{flex:1}
 .zip-btn{flex:none;background:var(--ink);color:#fff;border:none;border-radius:12px;padding:0 18px;font-size:14px;font-weight:700;cursor:pointer}
 .form-note{background:rgba(198,40,40,.06);border:1px solid rgba(198,40,40,.2);border-radius:12px;padding:14px 16px;font-size:12px;color:#a13a3a;margin:20px 0;display:flex;gap:8px;align-items:flex-start}
-.form-agree{background:var(--brand-light);border:1px solid rgba(46,125,50,.25);border-radius:12px;padding:16px;font-size:13px;color:var(--ink);margin-bottom:20px}
+.form-agree{background:var(--brand-light);border:1px solid rgba(151,215,0,.4);border-radius:12px;padding:16px;font-size:13px;color:var(--ink);margin-bottom:20px}
 .form-agree label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
 .form-agree input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:var(--brand-dark)}
 .form-submit{width:100%;background:var(--ink);color:#fff;border:none;border-radius:14px;padding:17px;font-size:15px;font-weight:700;cursor:pointer}
@@ -115,7 +115,8 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 .footer-brand{text-align:center;font-size:26px;font-weight:900;letter-spacing:.1em;color:var(--brand-dark);opacity:.4;margin-top:48px}
 @media(max-width:480px){.overview,.dd{grid-template-columns:1fr}}
 @media(max-width:380px){
-  .hero{padding:52px 18px 44px}
+  .banner{padding:44px 18px 38px}
+  .hero-text{padding:24px 18px 8px}
   .section{padding:32px 18px}
 }
 </style>
@@ -123,12 +124,15 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 <body>
 <div class="wrap">
 
-  <!-- ░░ HERO ░░ -->
-  <div class="hero">
-    <div class="hero-badge">Influencer Guide</div>
-    <h1>HOOAGO</h1>
+  <!-- ░░ HERO / BANNER ░░ -->
+  <div class="banner">
+    <div class="banner-badge">Influencer Guide</div>
+    <h1 class="banner-title">HOOAGO</h1>
+  </div>
+  <div class="hero-text">
     <div class="hero-sub">"Eat spicy, Stay happy"</div>
-    <p class="hero-desc">후아고는 매운 음식을 피하게 만드는 게 아니라,<br>매운맛을 즐긴 뒤의 불편함을 가볍게 케어해<br>매운맛 문화를 더 즐겁게 누리도록 돕는 매운맛 엔딩 케어 브랜드입니다.<br><br>장내 마이크로바이옴 빅데이터 기반 바이오 헬스케어 기업<br><span class="accent nowrap">바이옴에이츠(BIOMATZ)</span>가 만들었습니다.</p>  </div>
+    <p class="hero-desc">후아고는 매운 음식을 피하게 만드는 게 아니라,<br>매운맛을 즐긴 뒤의 불편함을 가볍게 케어해<br>매운맛 문화를 더 즐겁게 누리도록 돕는 매운맛 엔딩 케어 브랜드입니다.<br><br>장내 마이크로바이옴 빅데이터 기반 바이오 헬스케어 기업<br><span class="accent nowrap">바이옴에이츠(BIOMATZ)</span>가 만들었습니다.</p>
+  </div>
 
   <!-- ░░ 1. 캠페인 개요 ░░ -->
   <div class="section">
@@ -150,7 +154,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
       <div class="ov-label">제품명</div>
       <div class="ov-value">후아고 유산균 겔스틱 (청사과맛)</div>
     </div>
-    <p style="font-size:14px;color:var(--gray);margin-bottom:14px">위장을 부드럽게 감싸주는 묵직한 고농축 겔(Gel) 타입 현탁액 스틱으로, 휴대성과 편의성을 높인 스틱 파우치<span class="nowrap">(30g x 10포)</span> 구성입니다. 쿨피스·우유처럼 배부르지 않게, 의약품이 아닌 일반식품으로 식후 한 포면 깔끔하게 케어할 수 있습니다.</p>
+    <p style="font-size:14px;color:var(--gray);margin-bottom:14px">위장을 부드럽게 감싸주는 고농축 겔(Gel) 타입으로,<br>휴대성과 편의성을 높인 스틱 파우치 구성입니다.</p>
     <div class="dd" style="grid-template-columns:1fr">
       <div class="dd-col dd-do">
         <div class="dd-head">핵심 강조 포인트</div>
@@ -179,11 +183,11 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
     <div class="concepts">
       <div class="concept">
         <div class="concept-title">🌶 Before / After</div>
-        <div class="concept-text">마라탕·불닭·엽떡 등 매운 음식을 맛있게 먹는 장면 → 식전/식후 후아고 한 포 섭취 → 다음 날 편안한 아침 연출까지 이어지는 스토리텔링 구성을 추천드려요.</div>
+        <div class="concept-text">마라탕·불닭·엽떡 등 매운 음식을 맛있게 먹는 장면<br>→ 식전/식후 후아고 한 포 섭취<br>→ 다음 날 편안한 아침 연출까지 이어지는 스토리텔링 구성을 추천드려요.</div>
       </div>
       <div class="concept">
         <div class="concept-title">🧊 맵부심 꿀조합 / 필수템</div>
-        <div class="concept-text">매운 음식 먹을 때 쿨피스·우유 대신, 배부르지 않게 챙기는 '매운 음식 챌린지 필수템'으로 후아고를 소개해 주세요.</div>
+        <div class="concept-text">매운 음식 먹을 때 쿨피스·우유 대신,<br>배부르지 않게 챙기는 '매운 음식 챌린지 필수템'으로 후아고를 소개해 주세요.</div>
       </div>
     </div>
     <p style="font-size:12px;color:var(--gray);margin-top:16px;margin-bottom:2px">📎 참고 레퍼런스 콘텐츠</p>
@@ -204,18 +208,17 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 쿨피스·우유처럼 배부르지 않게, 식후 한 포로 깔끔하게 케어!
 
 #후아고 #매운맛엔딩케어 #맵부심<button class="copybtn" onclick="cp(this,'cap')">복사</button></div>
-    <p style="font-size:12px;color:var(--gray);margin-top:14px">⚠ 공동작업자 계정은 추후 안내드릴 예정이며, 태그는 필수입니다.</p>
   </div>
 
   <!-- ░░ 6. 해시태그 ░░ -->
   <div class="section">
     <div class="section-title"><span class="num">06</span> 해시태그 <span class="badge-req">필수</span></div>
-    <div class="copybox" id="tag">#후아고 #매운맛엔딩케어 #맵부심<button class="copybtn" onclick="cp(this,'tag')">복사</button></div>
     <div class="tags">
-      <div class="tag">#후아고</div>
-      <div class="tag">#매운맛엔딩케어</div>
-      <div class="tag">#맵부심</div>
+      <button type="button" class="tag" onclick="cpTag(this)">#후아고</button>
+      <button type="button" class="tag" onclick="cpTag(this)">#매운맛엔딩케어</button>
+      <button type="button" class="tag" onclick="cpTag(this)">#맵부심</button>
     </div>
+    <p style="font-size:12px;color:var(--gray);margin-top:14px">태그를 누르면 개별 복사됩니다. 공동작업자 계정은 추후 안내드릴 예정입니다.</p>
   </div>
 
   <!-- ░░ 7. 톤앤보이스 & 주의사항 ░░ -->
@@ -287,7 +290,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
       <div class="form-agree">
         <label>
           <input type="checkbox" id="f-agree" required>
-          <span>안내된 캠페인별 가이드라인 및 조건을 확인했으며 이에 동의합니다. 제작된 콘텐츠는 브랜드 및 후아고의 2차 활용에 동의합니다. (필수)</span>
+          <span>안내된 캠페인별 가이드라인 및 조건을 확인했으며 이에 동의합니다.<br>제작된 콘텐츠는 브랜드 및 후아고의 2차 활용에 동의합니다. (필수)</span>
         </label>
       </div>
 
@@ -299,7 +302,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
   <!-- ░░ 9. 정산 안내 ░░ -->
   <div class="section">
     <div class="section-title"><span class="num">09</span> 정산 안내</div>
-    <div class="settle-desc">캠페인 선정 완료 후 정산을 위한 서류 및 연락처를 누락 없이 제출해 주세요. 확인 후 <strong>다음 달 5일</strong>에 지급됩니다.</div>
+    <div class="settle-desc"><span class="accent">캠페인 선정 완료 후</span> 정산을 위한 서류 및 연락처를 누락 없이 제출해 주세요.<br>확인 후 <strong>다음 달 5일</strong>에 지급됩니다.</div>
     <div class="settle-list">
       <div class="settle-row">
         <div class="settle-label">제출 필수 서류</div>
@@ -326,6 +329,16 @@ function cp(btn,id){
   const box=document.getElementById(id);
   const txt=box.childNodes[0].textContent.trim();
   navigator.clipboard.writeText(txt).then(()=>{btn.textContent='복사됨 ✓';btn.classList.add('done');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('done')},1600)});
+}
+
+function cpTag(btn){
+  const txt = btn.textContent.trim();
+  navigator.clipboard.writeText(txt).then(()=>{
+    const orig = txt;
+    btn.textContent = '복사됨 ✓';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent = orig; btn.classList.remove('copied');}, 1200);
+  });
 }
 
 // 신청 데이터가 저장될 Google Apps Script 웹앱 URL. 아래 안내에 따라 배포 후 이 값을 교체하세요.
